@@ -1,5 +1,5 @@
 # django-ecommerce-api
-A simple ecommerce api built using djangorestframework and djangorestframework-simpleJWT for authentication
+A simple e-commerce API built using Django Rest Framework and JWT for authentication.
 
 ## Prerequisites
 1. Python 3.x
