@@ -31,7 +31,6 @@ DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['https://django-ecomm-api.herokuapp.com/']
 
-
 # Application definition
 
 INSTALLED_APPS = [
