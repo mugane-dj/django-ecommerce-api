@@ -12,10 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-import os
+import os, django_heroku
 from dotenv import load_dotenv
 load_dotenv()
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,10 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://django-ecomm-api.herokuapp.com/']
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'djmoney',
-    'storages'
+    'storages',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -205,5 +204,8 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+}
 
 django_heroku.settings(locals())
