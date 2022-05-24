@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
 
@@ -134,7 +135,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-USE_S3 = os.getenv('USE_S3')
+USE_S3 = os.getenv('USE_S3') == 'True'
 
 if USE_S3:
     # aws settings
@@ -157,7 +158,6 @@ else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     STATIC_URL = 'static/'
     MEDIA_URL = 'media/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
