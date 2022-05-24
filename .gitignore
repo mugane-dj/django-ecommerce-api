@@ -7,9 +7,7 @@ __pycache__/
 *.so
 
 #Static
-staticfiles/admin
-staticfiles/drf_yasg
-staticfiles/rest_framework
+staticfiles/
 # Distribution / packaging
 .Python
 build/

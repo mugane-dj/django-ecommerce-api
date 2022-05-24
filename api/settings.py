@@ -29,6 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://django-ecomm-api.herokuapp.com/']
+
 # Application definition
 
 INSTALLED_APPS = [
