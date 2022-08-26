@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG') == 'TRUE'
 
-ALLOWED_HOSTS = ['https://drf.azurewebsites.net/']
+ALLOWED_HOSTS = ['https://django-ecomm-api.herokuapp.com/']
 # Application definition
 
 INSTALLED_APPS = [
